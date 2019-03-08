@@ -1,0 +1,22 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "node basic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pengloo53/node-basic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pengloo53/node-basic/issues"
+  },
+  "homepage": "https://github.com/pengloo53/node-basic#readme",
+  "devDependencies": {
+    "eslint": "^5.15.1"
+  }
+}
