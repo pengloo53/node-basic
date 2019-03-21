@@ -2,13 +2,13 @@
  *  Hello world.
  */
 
-var http = require('http');
+const http = require('http');
+const template = require('./template.js');
 
-var server = http.createServer(function(req,res){
-    res.setHeader('content-type', 'text/plain');
-    res.end('Hello Node.');
-});
+http.createServer(function(req,res){
+    res.setHeader('content-type', 'text/html');
+    res.end(template());
+    // res.end(template.changeToHeader());
+}).listen('3030');
 
-server.listen('3000');
-
-console.info('Server is started @3000');
+console.log('Server is started @3030');
