@@ -4,6 +4,7 @@
 
 const http = require('http');
 const template = require('./template.js');
+const md5 = require('md5');
 
 http.createServer(function(req,res){
     res.setHeader('content-type', 'text/html');
