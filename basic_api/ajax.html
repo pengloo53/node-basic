@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ajax test page</title>
+</head>
+<body style="text-align: center">
+  <img src="http://lupeng.me/assets/images/weixin.jpg" class="img-responsive" alt="Image">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script>
+    $(function(){
+      // 第一种思路
+      $.ajax({
+        url: 'http://localhost:3000',
+        success: function(result, status){
+          console.log(`支持跨域：status is ${status}`);
+          console.log(`支持跨域：result is ${result}`);
+        }
+      });
+      $.ajax({
+        url: '/getCrossResource',
+        success: function (result, status) {
+          console.log(`status is ${status}`);
+          console.log(`result is ${result}`);
+        }
+      });
+      $.ajax({
+        url: 'http://localhost:3000',
+        dataType: 'jsonp',
+        success: function (result, status) {
+          console.log(`jsonp: status is ${status}`);
+          console.log(`jsonp: result is ${result.message}`);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
